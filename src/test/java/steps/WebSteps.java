@@ -32,8 +32,8 @@ public class WebSteps {
         $("#issues-tab").click();
     }
 
-    @Step("Find issue with number {number}")
-    public void checkIssue(int number) {
-        $(withText("#" + number)).should(Condition.exist);
+    @Step("Find issue with number {issueName}")
+    public void checkIssue(String issueName) {
+        $(withText(issueName)).should(Condition.exist);
     }
 }

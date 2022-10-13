@@ -15,7 +15,7 @@ import static org.openqa.selenium.By.linkText;
 public class SelenideLabelsTest {
 
     private static final String REPOSITORY = "KaNoNiR-FuN/qa_guru_15_10_hw";
-    private static final int ISSUE = 1;
+    private static final String ISSUE = "Test Issue";
 
     @Test
     @Feature("Search Issue in repository")
@@ -32,6 +32,6 @@ public class SelenideLabelsTest {
         $(".header-search-input").submit();
         $(linkText(REPOSITORY)).click();
         $("#issues-tab").click();
-        $(withText("#" + ISSUE)).should(Condition.exist);
+        $(withText(ISSUE)).should(Condition.exist);
     }
 }

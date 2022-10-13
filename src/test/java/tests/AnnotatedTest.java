@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class AnnotatedTest {
 
     private static final String REPOSITORY = "KaNoNiR-FuN/qa_guru_15_10_hw";
-    private static final int ISSUE = 1;
+    private static final String ISSUE = "Test Issue";
 
     @Test
     public void findGitIssueTest() {

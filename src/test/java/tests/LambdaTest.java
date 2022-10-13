@@ -14,7 +14,7 @@ import static org.openqa.selenium.By.linkText;
 public class LambdaTest {
 
     private static final String REPOSITORY = "KaNoNiR-FuN/qa_guru_15_10_hw";
-    private static final int ISSUE = 1;
+    private static final String ISSUE = "Test Issue";
 
     @Test
     public void findGitIssueTest() {
@@ -39,7 +39,7 @@ public class LambdaTest {
         });
 
         step("Check Issue with number " + ISSUE, () -> {
-            $(withText("#" + ISSUE)).should(Condition.exist);
+            $(withText(ISSUE)).should(Condition.exist);
         });
 
     }
